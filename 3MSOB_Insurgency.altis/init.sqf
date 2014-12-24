@@ -44,16 +44,19 @@ if (!isServer) then {
 ] execVM "scripts\repetitive_cleanup.sqf";
 
 // EOF
-
-while {true} do {
-	if(alive player) then {
-		sleep 60;
-		player globalChat "The 3MSOB is recruiting! www.3msob.com";
-		sleep 300;
-		player globalChat "Join our teamspeak for more stategic gameplay: IP: 192.223.28.153";
-		sleep 300;
-		player globalChat "The 3MSOB is a realism unit looking for members! Apply today at www.3msob.com";
-		sleep 240;
+if (!isServer) then
+{
+	while {true} do
+	{
+		if(alive player) then
+		{
+			sleep 60;
+			player globalChat "The 3MSOB is recruiting! www.3msob.com";
+			sleep 300;
+			player globalChat "Join our teamspeak for more stategic gameplay: IP: 192.223.28.153";
+			sleep 300;
+			player globalChat "The 3MSOB is a realism unit looking for members! Apply today at www.3msob.com";
+			sleep 240;
 		}
 	}
-
+};
