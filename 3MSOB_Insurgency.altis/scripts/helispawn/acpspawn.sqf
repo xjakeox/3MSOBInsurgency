@@ -1,0 +1,10 @@
+_acp = createVehicle ["B_Heli_Light_01_F", (getMarkerPos "acppad"), [], 0, "CAN_COLLIDE"];
+_acp setdir 210;
+_acp animate ["addBenches",0];
+_acp lockCargo [2,true];
+_acp lockCargo [3,true];
+_acp lockCargo [4,true];
+_acp lockCargo [5,true];
+_acp addweapon "CMFlareLauncher";
+_acp addmagazine "120Rnd_CMFlare_Chaff_Magazine";
+_acp addaction ["How to Guide, ACP","scripts\helispawn\acphint.sqf"];

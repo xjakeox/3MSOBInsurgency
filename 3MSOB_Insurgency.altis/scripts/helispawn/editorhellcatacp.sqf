@@ -1,0 +1,1 @@
+editorhellcatacp addaction ["How to Guide, ACP","scripts\helispawn\acphint.sqf"];

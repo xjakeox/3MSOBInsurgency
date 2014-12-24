@@ -1,0 +1,11 @@
+armedmh9 addweapon "CMFlareLauncher";
+armedmh9 addmagazine "120Rnd_CMFlare_Chaff_Magazine";
+armedmh9 addaction ["How to Guide, ACP","scripts\helispawn\acphint.sqf"];
+armedmh9 lockCargo true;
+armedmh9 animate ["addBackseats",0];
+armedmh9gun1 attachto [armedmh9,[-0.15,0.7,0.68]]; 
+armedmh9gun1 setdir 270;
+armedmh9gun1 removemagazines "40Rnd_20mm_G_belt";
+armedmh9gun1 addMagazine "200Rnd_20mm_G_belt";
+armedmh9gun1 addMagazine "200Rnd_20mm_G_belt";
+armedmh9gun1 addaction ["Reload GMG","scripts\helispawn\gmgload.sqf"];

@@ -1,0 +1,17 @@
+mohawk1 animate ["door_back_R",1];
+mohawkgun1 attachto [mohawk1,[0.45,2.2,-1.2]];
+mohawkgun1 setdir 90;
+mohawkgun1 addaction ["Reload HMG","scripts\helispawn\hmgload.sqf"];
+mohawkgun1 removemagazines "500Rnd_127x99_mag";
+mohawkgun1 addMagazine "500Rnd_127x99_mag_Tracer_Red";
+mohawkgun1 addMagazine "500Rnd_127x99_mag_Tracer_Red";
+mohawkgun1 addMagazine "500Rnd_127x99_mag_Tracer_Red";
+mohawkgun1 addMagazine "500Rnd_127x99_mag_Tracer_Red";
+mohawkgun1 addMagazine "500Rnd_127x99_mag_Tracer_Red";
+mohawkgun1 addMagazine "500Rnd_127x99_mag_Tracer_Red";
+mohawkgun1 addMagazine "500Rnd_127x99_mag_Tracer_Red";
+mohawkgun1 addMagazine "500Rnd_127x99_mag_Tracer_Red";
+mohawkgun1 addMagazine "500Rnd_127x99_mag_Tracer_Red";
+mohawkgun1 addMagazine "500Rnd_127x99_mag_Tracer_Red";
+mohawkgun1 addMagazine "500Rnd_127x99_mag_Tracer_Red";
+mohawkgun1 addMagazine "500Rnd_127x99_mag_Tracer_Red";

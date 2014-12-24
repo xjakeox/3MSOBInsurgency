@@ -1,0 +1,62 @@
+// Basics
+author = "3MSOB"; 
+onLoadName = "3MSOB - Insurgency"; 
+onLoadMission = "3rd Marine Special Operations Battalion, www.3msob.com"; 
+loadScreen =  "images\3rd-MSOB-logo.jpg";
+#include "taw_vd\dialog.hpp"
+class Header {
+	gameType = COOP;
+	minPlayers = 0;
+	maxPlayers = 35;
+};
+
+// Server stuff
+disabledAI = true;
+joinUnassigned = 0;
+allowFunctionsLog = 0;
+
+// Respawn options for BTC Revive System
+respawn = 3;
+respawndelay = 6;
+respawnDialog = 1;
+
+// HALO JUMP
+#include "ATM_airdrop\dialog.hpp"
+class CfgSounds {
+	sounds[] = {Vent,Vent2,Para};
+	class  Vent {name="Vent";sound[]={ATM_airdrop\data\Vent.ogg,db-11,1.0};titles[] = {};};
+	class Vent2 {name="Vent2";sound[]={ATM_airdrop\data\Vent2.ogg,db-11,1.0};titles[] = {};};
+	class  Para {name="Para";sound[]={ATM_airdrop\data\parachute.ogg,db-11,1.0};titles[] = {};};
+};
+// Config Functions
+#include "ASORGS\menu.hpp"
+class CfgFunctions {
+	#include "ASORGS\cfgfunctions.hpp"
+	#include "taw_vd\CfgFunctions.hpp"
+};
+
+// BTC Revive System
+#include "scripts\=BTC=_revive\=BTC=_respawn.h"
+
+// Generic Vehicle Service
+#include "gvs\colors_include.hpp"
+#include "gvs\control_include.hpp"
+#include "gvs\stc_include.hpp"
+
+// Params (for Random Weather, and others)
+class Params {
+	// paramsArray[0]
+	class initialWeatherParam {
+		title = "Initializing Random Weather...";
+		values[] = {0,1,2,3,4};
+		texts[] = {"Clear","Overcast","Rain","Fog","Random"};
+		default = 4;
+	};
+};
+
+// Resource Titles for GVS
+class RscTitles {
+	#include "gvs\stc_include_alt.hpp" //Alterntive display class definitions
+};
+
+// EOF
