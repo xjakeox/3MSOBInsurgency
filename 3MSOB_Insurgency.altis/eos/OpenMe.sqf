@@ -27,6 +27,8 @@ hostileColor="colorRed";	// Default colour when enemies active
 bastionColor="colorOrange";	// Colour for bastion marker
 EOS_DAMAGE_MULTIPLIER=3;	// 1 is default
 EOS_KILLCOUNTER=false;		// Counts killed units
+/**DGF Cache addition**/
+DGF_CACHE=true;
 
 //                                                                          House     Patrol    Lt. Veh   Armored     Helo      Faction                        
 //

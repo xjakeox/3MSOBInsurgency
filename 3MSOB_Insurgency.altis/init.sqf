@@ -5,32 +5,29 @@ enableTeamswitch false;
 // EOS Insurgency System
 []execVM "eos\OpenMe.sqf";
 
+//Let EOS get cozy, and try to pull active markers from the engine
+sleep 2;
+[server getvariable "EOSmarkers", DEBUG]execVM "DGF_ammoCache\init.sqf";
+
 // BTC Revive System
 
 call compile preprocessFile "scripts\=BTC=_revive\=BTC=_revive_init.sqf";
-
-// Enhanced Helis
-[] execVM "scripts\helispawn\acpinit.sqf";
-[] execVM "scripts\helispawn\editorgargoyle.sqf";
-[] execVM "scripts\helispawn\editormohawk.sqf";
-[] execVM "scripts\helispawn\editoracp.sqf";
-// [] execVM "scripts\helispawn\pmc\pmcarmed.sqf";
-[] execVM "scripts\helispawn\armedmh9\armedmh9.sqf";
 
 // Generic Vehicle Service
 execVM "gvs\gvs_init.sqf";
 
 // Vehicles Interior Light
-nul=[] execVM "scripts\IntLight.sqf";
+null = [] execVM "scripts\IntLight.sqf";
 
 // Random Weather
 execVM "scripts\randomWeather2.sqf";
 
 // Repair Script (anyone with a toolkit can repair)
-// nul=[] execVM "scripts\repair.sqf";
+nul=[] execVM "scripts\repair.sqf";
 
 // Player Icons
-if (!isServer) then { 
+if ( !isServer ) then
+{ 
 	[] execVM "scripts\icons.sqf";
 };
 
@@ -43,7 +40,6 @@ if (!isServer) then {
 	0 	// seconds to delete dropped smokes/chemlights (0 means don't delete)
 ] execVM "scripts\repetitive_cleanup.sqf";
 
-// EOF
 if (!isServer) then
 {
 	while {true} do
@@ -60,3 +56,4 @@ if (!isServer) then
 		}
 	}
 };
+// EOF
