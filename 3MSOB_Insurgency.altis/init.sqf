@@ -7,7 +7,7 @@ enableTeamswitch false;
 
 //Let EOS get cozy, and try to pull active markers from the engine
 sleep 2;
-[server getvariable "EOSmarkers", DEBUG]execVM "DGF_ammoCache\init.sqf";
+[server getvariable "EOSmarkers"]execVM "DGF_ammoCache\init.sqf";
 
 // BTC Revive System
 
