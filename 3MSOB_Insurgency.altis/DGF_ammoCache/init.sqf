@@ -14,7 +14,7 @@
  DGF_isReady = false;
  
  //PRIVATE STUFF
- private [ "_building", "_cache", "_count", "_loc", "_match", "_mkr", "_srcArr", "_tmpArr" ];
+ private [ "_building", "_cache", "_count", "_loc", "_match", "_srcArr", "_tmpArr" ];
  _srcArr = _this select 0;
  _tmpArr = [];
  
@@ -36,7 +36,7 @@
 		if ( !_match ) then
 		{
 			_cache = "Box_IND_AmmoVeh_F" createVehicle [0,0,0];
-			_building = nearestBuilding getMarkerPos _mkr;
+			_building = nearestBuilding getMarkerPos _loc;
 			_cache setPosATL ( _building buildingPos 1 );
 		
 			cacheList set[count cacheList, _cache ];

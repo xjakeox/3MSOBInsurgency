@@ -206,7 +206,7 @@ QS_fnc_iconDrawGPS = compileFinal "
 	//===== INIT MAP
 	
 	waitUntil {sleep 0.1; !(isNull (findDisplay 12))};
-	clientEhDrawMap = ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["Draw",QS_fnc_iconDrawMap];
+	clientEhDrawMap = findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw",QS_fnc_iconDrawMap];
 	
 	//===== INIT GPS (waits for GPS to open)
 	
