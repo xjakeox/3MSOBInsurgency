@@ -5,9 +5,15 @@
  *
  * For clients to check position of intel drops
  **************************************************************************************/
+Display_Chat = compile preprocessfilelinenumbers "DGF_ammoCache\functions\Get_SideChatMessage.sqf";
 
- while {true} do
- {
+"DGF_sideChatMessage" addPublicVariableEventHandler
+{
+	call Display_Chat;
+};
+
+while {true} do
+{
 	private [ "_cache", "_case", "_cases", "_index", "_marker", "_markers" ];
     
 	_cases = nearestObjects[ getPosATL player, [ "Land_File1_F" ], 3 ];
@@ -17,14 +23,8 @@
 		if (!isNull _case) then
 		{
 			deleteVehicle _case;
-			
-			sideChatMessage = 2;
-			publicVariable "sideChatMessage";
-			
-			_index = round (random ( count cacheList - 1 ));
-			_cache = cacheList select _index;
-			
-			[ _cache ] execVM "DGF_ammoCache\functions\Display_Intel.sqf";
+			DGF_IntelCollected set [ count DGF_IntelCollected, 0 ];
+			publicVariableServer "DGF_IntelCollected";
 		};
 	};
 	
@@ -39,4 +39,4 @@
 	};
 	
 	sleep 2;
- }
+}

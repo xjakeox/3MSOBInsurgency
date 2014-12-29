@@ -5,7 +5,6 @@
  *
  * Call back for the "killed" event on enemy ai. 10 percent chance to drop things
  **************************************************************************************/
-
 private [ "_abovePos", "_case", "_marker", "_pos" ];
 
 if ( random 100 > 90 ) then
@@ -18,6 +17,6 @@ if ( random 100 > 90 ) then
 	_marker = "Sign_Arrow_F" createVehicle [0,0,0];
 	_marker setPosATL _abovePos;
 	
-	sideChatMessage = 1;
-	publicVariable "sideChatMessage";
+	DGF_SideChatMessage = 1;
+	PublicVariable "DGF_SideChatMessage";
 };

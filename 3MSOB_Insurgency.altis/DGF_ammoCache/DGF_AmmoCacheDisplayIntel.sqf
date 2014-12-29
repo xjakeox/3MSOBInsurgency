@@ -7,10 +7,10 @@
  **************************************************************************************/
 
 private [ "_cache", "_cachePos", "_i", "_mkr", "_mkrPos", "_mkrX", "_mkrY", "_radius", "_range", "_sign", "_sign2" ];
-    
-_cache = _this select 0;
-_cachePos = getPosATL _cache;
 
+_index = round( random( count DGF_CacheList - 1));
+_cache = DGF_CacheList select _index;
+_cachePos = getPosATL _cache;
 _i 	   = 0;
 _sign  = 1;
 _sign2 = 1;
@@ -36,6 +36,7 @@ _mkrPos =
 	_mkrY
 ]; 
 
+//Display the marker on the map
 _mkr = createMarker[format["%1intel%2", _cache, _i], _mkrPos]; 
 _mkr setMarkerType "hd_objective";
 _range  = round sqrt(_radius^2*2);
@@ -43,3 +44,7 @@ _range  = _range - (_range % 50);
 _mkr setMarkerText format["%1m", _range];
 _mkr setMarkerColor "ColorRed"; 	
 _mkr setMarkerSize [0.5,0.5];
+
+//Notify all clients of new event
+DGF_SideChatMessage = 2;
+PublicVariable "DGF_SideChatMessage";

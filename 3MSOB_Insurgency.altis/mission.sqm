@@ -77,7 +77,7 @@ class Mission
 		year=2014;
 		month=12;
 		day=24;
-		hour=6;
+		hour=10;
 		minute=10;
 		startFogBase=0.001;
 		forecastFogBase=0.001;
@@ -312,7 +312,7 @@ class Mission
 				items=8;
 				class Item0
 				{
-					position[]={14633.685,17.91,16774.506};
+					position[]={14506.665,24.339333,17538.641};
 					azimut=124.462;
 					special="FLY";
 					id=6;
@@ -322,6 +322,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=1;
+					init="this allowDamage false;";
 					description="Squad Leader";
 				};
 				class Item1

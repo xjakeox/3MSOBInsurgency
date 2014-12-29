@@ -12,5 +12,5 @@ _skillArray=(_this select 1);
 					if (EOS_DAMAGE_MULTIPLIER != 1) then {_unit removeAllEventHandlers "HandleDamage";_unit addEventHandler ["HandleDamage",{_damage = (_this select 2)*EOS_DAMAGE_MULTIPLIER;_damage}];};
 					if (EOS_KILLCOUNTER) then {_unit addEventHandler ["killed", "null=[] execVM ""eos\functions\EOS_KillCounter.sqf"""]};
 					// ADD CUSTOM SCRIPTS TO UNIT HERE
-					if (DGF_CACHE) then {_unit addEventHandler ["killed", "null=[ _this select 0] execVM ""DGF_ammoCache\functions\Spawn_Intel.sqf"""]};
+					if (DGF_CACHE) then {_unit addEventHandler ["killed", "null=[ _this select 0] execVM ""DGF_ammoCache\DGF_AmmoCacheSpawnIntel.sqf"""]};
 						} forEach (units _grp); 
