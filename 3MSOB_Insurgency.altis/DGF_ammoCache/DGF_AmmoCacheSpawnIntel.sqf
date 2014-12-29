@@ -7,7 +7,7 @@
  **************************************************************************************/
 private [ "_abovePos", "_case", "_marker", "_pos" ];
 
-if ( random 100 > 90 ) then
+if ( random 100 > 95 ) then
 {
 	_pos = getPosATL (_this select 0);
 	_case = "Land_File1_F" createVehicle [0,0,0];
